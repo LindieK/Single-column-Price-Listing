@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*General Document Styles*/
+html{
+    font-size: 16px;
+}
+body{
+    font-family: Karla;
+    font-size: 1.25em;/* 20px/16px */
+    font-weight: 400;
+    margin: 0;
+}
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(204, 43%, 93%);
+    height: 100vh;
+}
+#content{
+    display: flex;
+    border-radius: .75em;
+    box-shadow: 0 10px 40px hsla(218, 22%, 67%, 0.5);
+}
+h2,h3{
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+
+/*Join Section General Styles*/
+#join-section{
+    background-color: hsl(0, 0%, 100%);
+    border-top-left-radius: .75em;
+    border-top-right-radius: .75em;
+}
+#join-section #heading{
+    color:hsl(179, 62%, 43%);
+}
+#join-section #sub-heading{
+    color: hsl(71, 73%, 54%);
+}
+#join-section p{
+    color: hsl(218, 22%, 67%);
+    line-height: 1.5em;
+}
+
+/*Subscription Section Styles*/
+#subscription-section{
+    color: hsl(204, 43%, 93%);
+    background-color: hsl(179, 62%, 43%);
+}
+#subscription-section #amount{
+    font-size: 1.75em;/* 35px/20px*/
+    font-weight: 700;
+}
+#subscription-section #unit{
+    color: hsl(179, 47%, 72%);
+}
+#subscription-section button{
+    width: 100%;
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: hsl(71, 73%, 54%);
+    color:hsl(0, 0%, 100%);
+    border-radius: 8px;
+    box-shadow: 3px 5px 20px 3px rgba(23, 125, 122, .5);
+}
+
+
+/*Why Us Section Styles*/
+#why-section{
+    color: hsl(204, 43%, 93%);
+    background-color: hsl(179, 47%, 52%);
+    border-bottom-right-radius: .75em;
+}
+#why-section span{
+    display: block;
+    line-height: 1.5em;
+    opacity: .8;
+}
+
+
+/*Footer Styles*/
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+/*Media Queries*/
+@media only screen and (min-width: 1420px){
+    #content{
+        width:50%;
+    }
+}
+
+
+@media only screen and (min-width: 1200px){
+    #join-section p span{
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1051px) and (max-width:1419px){
+    #content{
+        width: 70%;
+    }
+}
+@media only screen and (min-width:1050px){
+    #content{
+        flex-wrap: wrap;
+    }
+    #join-section{
+        width:100%;
+        padding: 4%;
+    }
+    #subscription-section, #why-section{
+        width:42%;
+        padding: 4%;
+    }
+    #subscription-section{
+       border-bottom-left-radius: .75em; 
+    }
+    
+}
+
+
+@media only screen and (max-width:1049px){
+    #content{
+        flex-direction: column;
+        width:80%;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+    }
+    #join-section, #subscription-section, #why-section{
+        padding: 7%;
+    }
+    #why-section{
+        border-bottom-left-radius: .75em; 
+    }
+}
+
+
+@media only screen and (max-width:1023px){
+    body{
+        font-size: 16px;
+    }
+    main{
+        height: 104vh;
+    }
+}
